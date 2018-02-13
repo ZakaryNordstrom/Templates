@@ -60,6 +60,7 @@
     background: red;
     width: 100%;
     border: 1px black solid;
+    color: white;
   }
   .desktop-header {
     height: 90px;
@@ -101,7 +102,7 @@
   }
   #mobile_main,
   #tablet_main,
-  #siteHeader,
+  #mobile_header,
   #tablet_header {
     display: none;
   }
