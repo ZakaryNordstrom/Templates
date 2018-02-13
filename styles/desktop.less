@@ -1,0 +1,161 @@
+/*----------- LESS Variables ------------*/
+@color1: white;
+@color2: red;
+@color3: black;
+@color4: antiquewhite;
+
+@section-bg-color: @color1;
+@aside-bg-color: @color1;
+
+@col-1-bg-color: @color2;
+@col-1-text-color: @color1;
+@col-1-width: 85px;
+
+@h1-font-size: 4em;
+@h2-font-size: 2em;
+@h3-font-size: 1.25em;
+
+@siteHeader-bg-color: @color1;
+@siteHeader-border-bot: 2px black solid; 
+@siteHeader-height: 90px;
+@siteHeader-text-color: @color3;
+
+@nav-font-size: 2em;
+
+@header-bg-color: @color2;
+@header-text-color: white;
+@header-font-weight: 700;
+@header-border: 2px solid black;
+
+@article-border-bot: 1px black solid;
+@nav-border: 2px solid black;
+
+
+@media only screen and (min-width: 1000px) {
+
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1150px;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  h1 {
+    font-size: @h1-font-size;
+    padding-top: .18em;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: @h2-font-size;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: @h3-font-size;
+    font-weight: 700;
+  }
+  
+  nav a {
+    color: @color1;
+    font-weight: 800;
+  }
+  
+  .col-1 {
+    background-color: @col-1-bg-color;
+    flex: 9;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  
+  .col-3 {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+  
+  .col-1 ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+    flex: 5;
+  }
+  
+  .col-4 {
+    flex: 1;
+  }
+
+  .content-col {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header {
+    background: @header-bg-color;
+    width: 100%;
+    border: 1px black solid;
+  }
+
+  .desktop-header {
+    height: @siteHeader-height;
+    background: @siteHeader-bg-color;
+    width: 100%;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  header,
+  footer,
+  article,
+  nav,
+  aside {
+    padding: 1em;
+  }
+
+  section {
+    background-color: @section-bg-color;
+  }
+
+  #gallery,
+  article {
+    height: 20em;
+  }
+
+  aside {
+    background-color: @aside-bg-color;
+    height: 100%;
+  }
+
+  nav {
+    min-height: 2em;
+    margin: .5em;
+    margin-top: 1em;
+    border: @nav-border;
+  }
+  
+  nav li {
+    font-size: @nav-font-size;
+  }
+  
+  .button {
+    margin: 0 40px;
+  }
+
+  #mobile_main,
+  #tablet_main,
+  #siteHeader,
+  #tablet_header {
+    display: none;
+  }
+}
