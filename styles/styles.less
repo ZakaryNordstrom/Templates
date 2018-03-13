@@ -1,0 +1,836 @@
+/* Reset --------------------------------------------------------------------------------------- */
+
+    /* http://meyerweb.com/eric/tools/css/reset/
+         v2.0 | 20110126
+         License: none (public domain)
+     */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol, ul {
+        list-style: none;
+    }
+
+    blockquote, q {
+        quotes: none;
+    }
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+/* /Reset -------------------------------------------------------------------------------------- */  
+
+
+
+@color1: white;
+@color2: red;
+@color3: black;
+@color4: antiquewhite;
+
+@footer-bg-color: @color3;
+@footer-text-color: @color1;
+
+@section-bg-color: @color1;
+
+@h1-font-size: 2.2em;
+@nav-font-size: 1em;
+
+@siteHeader-bg-color: @color1;
+@siteHeader-border-bot: 2px black solid; 
+@siteHeader-height: 110px;
+
+@header-bg-color: @color2;
+@header-text-color: white;
+@header-font-weight: 700;
+@header-border: 3px solid black;
+
+@aside-bg-color: @color1;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+
+body h1,
+body nav,
+body header,
+.copyright,
+form select {
+  font-family: "Contrail One", "Sans Serif";
+}
+
+body,
+.hamburger-label {
+  font-family: "Fira Sans", "Sans Serif";
+}
+
+main {
+  margin-top: @siteHeader-height;
+
+}
+
+article {
+      display: flex;
+    flex-direction: column;
+}
+
+section p,
+article p {
+  padding: 2%;
+}
+
+h1 {
+  font-size: @h1-font-size;
+  padding-top: .18em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.05em
+}
+
+.mobile-height {
+  padding-bottom: 380px;
+  transition: .5s;
+}
+
+.col-2 {
+  width: 84%;
+  align-items: center;
+  z-index: 1002;
+}
+
+.col-2 h1 {
+  padding-top: .5em;
+  text-align: center;
+}
+
+.col-4 {
+  text-align: center;
+}
+
+.button {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-label {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.site-header {
+  height: @siteHeader-height;
+  width: 100%;
+  background: @siteHeader-bg-color;
+  border-bottom: @siteHeader-border-bot;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  transition: .5s;
+  z-index: 1000;
+}
+
+.site-header:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/mesh.jpg);
+  opacity: 0.077;
+  z-index: 999;
+  -ms-background-size: 100%;
+  -o-background-size:  100%;
+  -moz-background-size:  100%;
+  -webkit-background-size:  100%;
+  background-size:  100%;
+}
+
+.site-header-image {
+  background-image: url(../img/Triathlon_all_3_stages_pictogram.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: right;
+  background-size: 150px;
+}
+
+.footer {
+  background-color: @footer-bg-color;
+  width: 100%;
+  color: @footer-text-color;
+  display: flex;
+  flex-flow: column;
+  -webkit-justify-content: center; /* Safari */
+  justify-content: center;
+  align-items: center;
+}
+
+footer a:hover {
+  color: red;
+}
+
+footer a {
+  margin: .5em;
+  color: white;
+}
+
+footer h2 {
+  text-align: center;
+  padding: 2%;
+}
+
+.copyright {
+  flex: 8;
+}
+
+article h3,
+.card h3, 
+.card h4 {
+  text-align: center;
+}
+
+.card h5 {
+  padding: 2%;
+  text-align: center;
+}
+
+.contacts h3 {
+  text-align: center;
+}
+
+//contact form styles
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.forms li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.forms label{
+    margin:0 0 3px 0;
+    padding:0px;
+    font-weight: bold;
+}
+
+.forms input[type=submit]:hover, .forms input[type=button]:hover{
+    background: black;
+}
+.forms [type=textarea]{
+    height: 100px;
+    padding: 0 0 70px;
+}
+.forms input {
+  width: 100%;
+  font-family: "Contrail One", "Sans Serif";
+}
+.forms input[type=submit],
+#register_now {
+    background: red;
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.6em;
+    margin: 3%;
+    margin-top: 8%;
+    border: none;
+    border-radius: 10px;
+    align-self: center;
+    width: 6em;
+}
+
+#register_now {
+  margin-top: 0;
+  width: 10em;
+  font-family: "Contrail One", "Sans Serif";
+}
+
+#register_now a {
+  text-decoration: none;
+  color: white;
+}
+
+#register_now a::hover {
+  color: black;
+  cursor: pointer;
+}
+
+.home_text {
+  font-size: 1.2em;
+}
+
+.contacts h3 {
+  padding: 3%;
+}
+
+.feeds {
+  margin: 2%;
+}
+
+.fb-page {
+  background-color: white;
+  border-radius: 6px;
+  width: 346px;
+  height: 346px;
+  padding: 3px;
+  top: -5px
+}
+
+
+
+
+// Horizontal Rule Styles
+/* Gradient transparent - color - transparent */
+hr.styled {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1100px;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -65px;
+  padding: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(255,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+nav {
+  min-width: 66px;
+  z-index: 1001;
+}
+
+nav a {
+  text-decoration: none;
+  color: @color1;
+  font-weight: 800;
+  font-size: @nav-font-size;
+  padding-left: 1px;
+}
+  
+nav a:hover {
+  color: @color3;
+  background-color: white;
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+nav ul li p {
+  font-weight: 600;
+}
+
+header {
+  background-color: @header-bg-color;
+  border-bottom: @header-border;
+  color: @header-text-color;
+  font-weight: @header-font-weight;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  background-color: @section-bg-color;
+}
+
+aside {
+  height: 100%;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  padding: .75em;
+}
+
+
+
+
+// Card Styles
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.card {
+  flex: 0 230px;
+  margin: 10px;
+  height: auto;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+  max-width: 340px;
+}
+
+.card img {
+  width: 96%;
+  border: 1px gray solid;
+  margin-left: 2%;
+  margin-bottom: 1.5%;
+}
+
+.card,
+.card img,
+.card header {
+  border-radius: 3px;
+}
+
+.grower {
+  flex-grow: 9;
+  max-width: 1100px;
+}
+
+
+
+// Hide Slider In Mobile & Show Slider Otherwise
+.slideshow-container {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .mobile-hero {
+    display: none;
+  }
+  
+  .slideshow-container {
+    display: inherit;
+  }
+  
+}
+
+
+// Mobile Size Corrections
+@media only screen and (max-width: 349.9px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .site-header {
+    background-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 283.9px) {
+  h1 {
+    font-size: 1.6em;
+  }
+}
+
+@media only screen and (max-width: 260.9px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 248.9px) {
+  h1 {
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (max-width: 599.9px) {
+  .mobile-hero {
+    margin-top: -20px;
+  }
+  
+  .slideshow-dots {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 999.9px) {
+  h1 {
+    font-weight: 700;
+    margin-left: 1em;
+  }
+  
+  nav a {
+    color: white;
+    font-weight: 800;
+  }
+    
+  .site-header {
+    height: 110px;
+  }
+  
+  .button-height {
+    height: 83px;
+    background-color: red;
+    /* fixed tablet menu bleed through >8*/
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 724.9px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 725px) and (max-width: 814.9px) {
+  h1 {
+    font-size: 2.6em;
+  }
+}
+
+@media only screen and (min-width: 815px) and (max-width: 843.9px) {
+  h1 {
+    font-size: 2.7em;
+  }
+}
+
+@media only screen and (min-width: 844px) and (max-width: 899.9px) {
+  h1 {
+    font-size: 2.8em;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 999.9px) {
+  h1 {
+    font-size: 2.9em;
+  }
+}
+
+
+
+/* ====Tablet and Mobile Nav Styles */
+
+@media screen and (max-width: 999.9px) {
+	
+    .hamburger {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+    }
+	
+	.menu {
+      flex-flow: row wrap;
+      height: 70px;
+      overflow: hidden;
+      transition: 0.6s;
+      padding-top: 15px;
+      padding-left: 7px;
+	}
+	
+	.button {
+      height: 60px;
+	}
+	
+	.expandMenu {
+      height: 380px;
+      transition: .5s;
+      background-color: red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+//==== Desktop Styles ======================
+@media only screen and (min-width: 1000px) {
+  
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: black;
+  }
+  
+  main {
+    background-color: white;
+    margin-top: 0;
+  }
+  
+  h1 {
+    font-size: 3.7em;
+    padding-top: .18em;
+    font-weight: 700;
+  }
+  h2 {
+    //font-size: 2em;
+    font-weight: 700;
+  }
+  h3 {
+    //font-size: 1.25em;
+    font-weight: 700;
+  }
+  
+  .site-header {
+
+    height: auto;
+    max-height: 15em;
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+
+  }
+  
+  .hamburger-menu {
+    display: none;
+  }
+  
+  .col-1 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .col-1 ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .col-2 {
+    align-self: center;
+  }
+
+  .col-3 {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+  }
+  
+  .col-3 .forms {
+    width: 80%;
+  }
+
+  .col-4 {
+    flex: 2;
+  }
+  
+  .col-3,
+  .col-4 {
+    padding: .75em;
+  }
+
+  .content-col {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .hamburger-label {
+    display: none;
+  }
+
+  img {
+    max-width: 1100px;
+  }
+  
+  nav a {
+    color: red;
+    padding: 5px;
+    border-radius: 10px;
+    text-shadow: none;
+  }
+  
+  nav a:hover {
+  background-color: red;
+  border: none;
+}
+  
+  nav li {
+    font-size: 2em;
+  }
+  
+  .button {
+    margin: 0 40px;
+  }
+  
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1159.9px) {
+  h1 {
+    font-size: 3.4em;
+  }
+}
+
