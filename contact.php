@@ -55,7 +55,5 @@
     </section>
   </main>
 </body>
-
-<?php include_once './includes/footer.html' ?>
-
 <script src="scripts/navi.js" type="text/javascript"></script>
+<?php include_once './includes/footer.html' ?>

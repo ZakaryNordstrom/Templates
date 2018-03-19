@@ -9,9 +9,7 @@
     include_once 'includes/main.php'; 
   ?>
 </main>
- 
+<script src="scripts/navi.js" type="text/javascript"></script> 
 <?php
     include 'includes/footer.html';
 ?>
-
-<script src="scripts/navi.js" type="text/javascript"></script>

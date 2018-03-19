@@ -105,16 +105,14 @@
       <hr class="styled">
       <h4>12:00&nbspPM Sunday</h4>
     </header>
-    <h5>Spalsh And Dash</h5>
-    <p> Come enjoy hot food and cold beer after the weekend's events. Participation will include an all inclusive pass to the weekend’s live entertainment and  fitness exhibition. A change of cloths is recomended for maximum enjoyment as the party usually lasts several hours into the chilly evening. 
+    <h5>Splash And Dash</h5>
+    <p> This is a childrens event is designed for kids ages 6 to 12. It contains a 100 yard swimming course and a 50 meter dash. This race is free for children with adults participating in the weekends events, or $25 for children who's grown ups are not participating in an events.
     </p>
     <hr class="styled">
     <img src="./img/2015-05-31_11-55-46_triathlon.jpg" alt="beginer triathletes"/>
   </article>
 </main>
- 
+<script src="scripts/navi.js" type="text/javascript"></script> 
 <?php
     include 'includes/footer.html';
 ?>
-
-<script src="scripts/navi.js" type="text/javascript"></script>

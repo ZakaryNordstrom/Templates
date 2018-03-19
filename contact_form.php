@@ -1,6 +1,21 @@
 <?php
+  $title = "Thanks for Your Comment";
+  include 'includes/head.php';
+  include 'includes/header.php';
 
-echo '<script>window.location.href = "https://zakarynordstrom.webhostingforstudents.com/cas222/template/thanks_comment.php/";</script>';
+  echo '<main id="form-center">
+      <header><h2>Thanks for Providing Feedback!</h2></header>
+      <img src="./img/34932345236_1f2534307c_o.jpg" alt="jump in the water" style="width:100%">
+      <br>
+      <br>
+      <h3>It Keeps Us In The Loop</h3>
+      <hr class="styled">
+      <h4>
+      Thanks for your question or comment. We value all feedback here at Ace in the Hole MultiSport Events. We thank you for taking time to provide this feedback, it goes a long ways towards bettering our services.
+      </h4>
+  </main>';
+
+  include 'includes/footer.html';
 
 // Gets posted data from the HTML form fields with basic 'sanitiation'
 $FirstName = trim(stripslashes($_POST['FirstName'])); 

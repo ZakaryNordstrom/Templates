@@ -12,7 +12,7 @@
             <h2>Costs & Perks</h2>
           </header>
           <h3>Ace in the Hole Multisport Event Weekend </h3>
-          <p> Includes a first timer triathlon, a sprint, Olympic, and Half-Iron triathlons and 10K and Half marathon runs. Come to experience your first race or come to compete to win, but make sure you come to have fun!
+          <p> Includes a first timer triathlon, a sprint, Olympic, and Half-Iron triathlons and 10K and half marathon runs. Come to experience your first race or come to compete to win, but make sure you come to have fun!
           </p>
 
           <br>
@@ -27,6 +27,7 @@
             <br> Half Marathon - $75
             <br> Sprint - $90
             <br> Try-a-Tri - $65
+            <br> Splash And Dash - Free or $25
           </p>
 
           <br>
@@ -102,7 +103,7 @@
               </li>
 
               <li>
-                <label for="VolunteerOrParticipate">Are You Volunteering Or Participanting? - </label>
+                <label for="VolunteerOrParticipate">Are You Volunteering Or Participating? - </label>
                 <select name="VolunteerOrParticipant" required>
                   <option for="volunteer" value="volunteer">Volunteer</option>
                   <option  id="participant" value="participant">Participant</option>
@@ -125,15 +126,16 @@
                 <select name="Sunday" required>
                   <option id="no_sunday_event" value="none_sunday">No Sunday Event</option>
                   <option id="sprint" value="sprint">Sprint Triathlon</option>
-                  <option id="try-a-tri" value="try-a-tri">Try-A-Try</option>
+                  <option id="try-a-tri" value="try-a-tri">Try-A-Tri</option>
+                  <option id="splash-and-dash" value="splash-and-dash">Splash And Dash</option>
                 </select>
               </li>
 
               <li>
-                <label for="SplashAndDash">After Party Featuring Live Entertainment - </label>
-                <select name="SplashAndDash" required>
+                <label for="AfterParty">After Party Featuring Live Entertainment - </label>
+                <select name="AfterParty" required>
                   <option id="no_party" value="no_party">No After Party</option>
-                  <option id="splash_and_dash" value="splash_and_dash">Splash And Dash After Party</option>
+                  <option id="after_party" value="after_party">After Party!</option>
                 </select>
               </li>
             </ul>
@@ -144,9 +146,7 @@
       <!--Content-col-->
     </main>
   </body>
-
+  <script src="scripts/navi.js" type="text/javascript"></script>
   <?php
   include 'includes/footer.html';
 ?>
-
-    <script src="scripts/navi.js" type="text/javascript"></script>
